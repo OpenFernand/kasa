@@ -4,6 +4,7 @@ import App from '../App';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
  
+
 const HeaderFooterLayout = () => {
     return <>
         <Navbar />
