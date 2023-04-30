@@ -16,9 +16,9 @@
 }
 
 .ApartmentCard__subtitle {
-    width: 50%;
+    width: 40%;
     margin-inline-start: .5rem;
     margin-block-end: .5rem;
     color: white;
-
+    text-decoration: none;
 }
