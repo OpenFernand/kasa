@@ -7,7 +7,9 @@ import Navbar from '../components/Navbar';
 const HeaderFooterLayout = () => {
     return <>
         <Navbar />
-        <Outlet />
+        <main>
+            <Outlet />
+        </main>
         <Footer />
     </>
 }
@@ -27,11 +29,11 @@ export const router =createBrowserRouter([
         },
         {
             path:"/about",
-            element: <h1>A propos</h1>
+            element: <h1>A propos de router</h1>
         },
         {
             path:"/404",
-            element: <h1>404</h1>
+            element: <h1>404 de router</h1>
         }
     ]
 }

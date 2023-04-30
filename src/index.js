@@ -7,7 +7,7 @@ const router =createBrowserRouter([
   {
     path:"/",
     element: <App />,
-    errorElement : <h1>404 not found</h1>
+    //errorElement : <h1>404 not found</h1>
   },
   {
     path:"/flat",
@@ -15,11 +15,11 @@ const router =createBrowserRouter([
   },
   {
     path:"/about",
-    element: <h1>A propos</h1>
+    element: <h1>A propos de index</h1>
   },
     {
     path:"/404",
-    element: <h1>404</h1>
+    element: <h1>404 de index</h1>
   },
   
 ])
