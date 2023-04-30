@@ -1,12 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import './ApartmentCard.css'
+import './ApartmentCard.scss'
 
 function ApartmentCard() {
   return (
-    <div className='ApartmentCard'>
+    <div className='apartment'>
         <Link to="/flat">
-            <div className='apartmentCard__subtitle'>Titre de la location</div>
+            <div className='apartment__subtitle'>Titre de la location</div>
         </Link>
     </div>
   )

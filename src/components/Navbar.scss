@@ -1,8 +1,10 @@
+@use "../variables" as *;
+
 .navbar {
     display: flex;
     align-items: center;
     padding: 2rem;
-    color: #ff6060;
+    color: $color-primary;
     font-weight: 700;
     gap: 2rem;
     & > *:first-child {
@@ -10,13 +12,11 @@
     }
     & a {
         text-decoration: none;
-        color:#ff6060;
+        color:$color-primary;
     }
-    &.active {
-        text-decoration: underline;
-    }
+    &.active,
     &:hover {
         text-decoration: underline;
-    } 
+    }
 }
 
