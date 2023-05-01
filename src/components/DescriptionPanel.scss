@@ -1,0 +1,31 @@
+@use "../scss/variables.scss" as *;
+
+.description_panel {
+    margin-bottom: 1rem;
+    p {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .description__header {
+        background-color: $color-primary;
+        color: $color-tertiary;
+        padding: 0.2em 1em;
+        border-radius: 0.7rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        i {
+            font-size: 2rem;
+            cursor: pointer;
+        }
+    }
+    .description__content {
+        background-color: $background-light;
+        color: $color-tertiary;
+        padding: 1rem;
+        border-radius: 0 0 1rem 1rem;
+        position: relative;
+        top: -0,3rem;
+        z-index: -1;
+    }
+}

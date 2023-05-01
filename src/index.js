@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
+import App from './pages/HomePage';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router =createBrowserRouter([
   {
     path:"/",
     element: <App />,
-    //errorElement : <h1>404 not found</h1>
+    errorElement : <h1>404 not found de index</h1>
   },
   {
     path:"/flat",
@@ -17,11 +17,6 @@ const router =createBrowserRouter([
     path:"/about",
     element: <h1>A propos de index</h1>
   },
-    {
-    path:"/404",
-    element: <h1>404 de index</h1>
-  },
-  
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(

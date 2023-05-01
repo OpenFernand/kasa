@@ -4,11 +4,11 @@ import './ApartmentCard.scss'
 
 function ApartmentCard() {
   return (
-    <div className='apartment'>
-        <Link to="/flat">
-            <div className='apartment__subtitle'>Titre de la location</div>
-        </Link>
-    </div>
+    <Link to="/flat">
+        <div className='apartment'>
+          <div className='apartment__subtitle'>Titre de la location</div>
+        </div>
+    </Link>
   )
 }
 
