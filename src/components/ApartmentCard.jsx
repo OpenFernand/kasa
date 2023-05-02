@@ -4,6 +4,7 @@ import './ApartmentCard.scss'
 
 function ApartmentCard(props) {
   console.log('props dans apartment card:', props)
+  console.log('le titre', props.title)
   return (
     <Link to="/flat">
         <div className='apartment'>

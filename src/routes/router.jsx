@@ -18,8 +18,6 @@ const HeaderFooterLayout = () => {
     </>
 }
 
-
-
 export const router =createBrowserRouter([
   {
     element: <HeaderFooterLayout />,
