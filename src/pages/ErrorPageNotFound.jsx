@@ -3,6 +3,7 @@ import './ErrorPageNotFound.scss'
 import Navbar from '../components/Navbar'
 import Main from '../layout/Main'
 
+
 export function ErrorPageNotFound() {
   return (
     <>
@@ -16,7 +17,4 @@ export function ErrorPageNotFound() {
         </Main>
     </>
   )
-  
-
-
 }

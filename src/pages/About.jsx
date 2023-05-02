@@ -1,7 +1,7 @@
 import React from 'react'
-import ImageBanner from '../components/Banner'
+import {ImageBanner} from '../components/ImageBanner'
 import { DescriptionPanel } from '../components/DescriptionPanel'
-import './About.css'
+import './About.scss'
 
 function About() {
 

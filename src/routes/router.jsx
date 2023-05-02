@@ -1,5 +1,6 @@
 import React from 'react';
-import { createBrowserRouter, Outlet } from "react-router-dom";
+import ReactDOM from 'react-dom';
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import HomePage from '../pages/HomePage';
 import Footer from '../layout/Footer';
 import Main from '../layout/Main';
@@ -38,3 +39,10 @@ export const router =createBrowserRouter([
     ]
 }
 ])
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+//ReactDOM.render(document.getElementById('root')).render(
+    <React.StrictMode>
+      <RouterProvider router={router} />
+    </React.StrictMode>
+  )
