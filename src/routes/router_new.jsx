@@ -9,6 +9,10 @@ import Main from '../layout/Main';
 import Navbar from '../components/Navbar';
 import { ErrorPageNotFound } from '../pages/ErrorPageNotFound';
 
+// Composant qui définit une mise en page de base pour l'application 
+// qui inclut une barre de navigation en haut, une section centrale 
+// pour afficher le contenu des différentes pages, et un Footer en bas.
+
 const HeaderFooterLayout = () => {
     return <>
         <Navbar />
@@ -19,6 +23,7 @@ const HeaderFooterLayout = () => {
     </>
 }
 
+// Fonction de configuation des routages en définissant des routes 
 function router () {
     const router = createBrowserRouter([
         { path: "*", element: <HeaderFooterLayout />, errorElement: <ErrorPageNotFound /> },
