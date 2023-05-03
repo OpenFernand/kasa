@@ -24,7 +24,7 @@ export function ApartmentHeader() {
                 <span className='on'>★</span>
                 <span className='on'>★</span>
                 <span className='on'>★</span>
-                <span className='off'>★</span>
+                <span className='on'>★</span>
                 <span className='off'>★</span>
             </div>
         </div>

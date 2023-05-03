@@ -2,9 +2,9 @@
 
 .apartment__description__area {
     display: flex;
-    gap: 1 rem;
+    gap: 1rem;
     
-    @media screen and (width <= 768px) {
+    @media screen and (max-width : 768px) {
         flex-direction: column;
     }
  }

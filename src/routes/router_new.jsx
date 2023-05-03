@@ -27,7 +27,6 @@ const HeaderFooterLayout = () => {
 function router () {
     const router = createBrowserRouter([
       { 
-
         element: <HeaderFooterLayout />,
         errorElement : <ErrorPageNotFound />,
         children: [
@@ -35,7 +34,8 @@ function router () {
         { path: "/", element: <HomePage />, errorElement: <ErrorPageNotFound /> },
         { path: "/flat", element: <ApartmentPage />, errorElement: <ErrorPageNotFound /> },
         { path: "/about", element: <About />, errorElement: <ErrorPageNotFound /> },
-      ]
+  
+        ]
 
       }
       
