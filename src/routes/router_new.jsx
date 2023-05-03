@@ -26,11 +26,19 @@ const HeaderFooterLayout = () => {
 // Fonction de configuation des routages en définissant des routes 
 function router () {
     const router = createBrowserRouter([
-        { path: "*", element: <HeaderFooterLayout />, errorElement: <ErrorPageNotFound /> },
+      { 
+
+        element: <HeaderFooterLayout />,
+        errorElement : <ErrorPageNotFound />,
+        children: [
+
         { path: "/", element: <HomePage />, errorElement: <ErrorPageNotFound /> },
         { path: "/flat", element: <ApartmentPage />, errorElement: <ErrorPageNotFound /> },
         { path: "/about", element: <About />, errorElement: <ErrorPageNotFound /> },
-    
+      ]
+
+      }
+      
       ]);
 
     ReactDOM.createRoot(document.getElementById('root')).render(
