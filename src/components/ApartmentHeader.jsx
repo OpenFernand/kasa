@@ -3,7 +3,7 @@ import './ApartmentHeader.scss'
 
 export function ApartmentHeader({flat}) {
     const {name} = flat.host
-    const [firstName, lastName] = name.split('')
+    const [firstName, lastName] = name.split(' ')
   return (
     <div className='apartment__header'>
         <div className='apartment__title'>
