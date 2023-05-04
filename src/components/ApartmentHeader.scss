@@ -13,9 +13,9 @@
     .apartment__owner {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
         @media screen and (max-width: 768px) {
             flex-direction: row;
+            justify-content: space-between;
         }
     }
     .apartment__owner__details {
@@ -25,9 +25,9 @@
             order: 1;
         }
     }
-    .apartment__owner__badge {
+    .apartment__owner__badge img {
         height: 50px;
-        width: 50%;
+        width: 50px;
         border-radius: 50%;
         background-color: $background-dark;
     }
@@ -36,25 +36,28 @@
         justify-content: center;
         align-items: center;
         gap: 0.2rem ;
-        .on {
-            font-size: 2rem;
-            color: $color-primary;
+        color: $background-dark;
+        * {
+            font-size: 1rem;
         }
-        .off {
-            font-size: 2rem;
-            color: $background-dark;
+        .on {
+            //font-size: 2rem;
+            color: $color-primary;
         }
     }
     h1 {
         font-weight: 500;
         margin-top: 0;
         margin-bottom: 0;
+        font-size: 36px;
+        color: $color-primary;
     }
     h2 {
         font-weight: 500;
-        margin-top: 0.5em;
-        margin-bottom: 0.2em;
+        margin-top: 0.2em;
+        margin-bottom: 1.1em;
         font-size: 18px;
+        color: $color-primary;
     }
     .apartment__tags {
         display: grid;
@@ -65,6 +68,7 @@
             padding: 0.3em 1em;
             border-radius: 0.7rem ;
             text-align: center;
+            margin-right: 7px; // ajustement
         }
     }
     // verifier si c'est utile dans ApartmentHeader ???
