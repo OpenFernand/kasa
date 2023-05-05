@@ -1,11 +1,14 @@
 @use '../scss/variables.scss' as *;
 
-.apartment__description__area {
-    display: flex;
-    gap: 2rem;
+.apartment-page {
 
-    @media screen and (max-width : 768px) {
-        flex-direction: column;
-    }
+    .apartment__description__area {
+        display: flex;
+        gap: 2rem;
+        overflow: hidden;
+        @media screen and (max-width : 768px) {
+            flex-direction: column;
+        }
     
  }
+}

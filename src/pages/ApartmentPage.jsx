@@ -33,13 +33,16 @@ function ApartmentPage() {
 if (flat == null) return <div> ...Loading</div> // Execute le loading pour laisser le temps de recharger la page 
   return (
     <div className='apartment-page'>
-        <ImageBanner imageURL={flat.cover} />
+        <ImageBanner pictures={flat.pictures} />
         <ApartmentHeader flat={flat}  />
         <div className='apartment__description__area'>
             <DescriptionPanel title='Description' content={flat.description} />
 
-            <DescriptionPanel title='Equipments' content={flat.equipments.map((eq, index) => <li key={index}> {eq} </li>)} />
-
+            <DescriptionPanel 
+            title='Equipments' 
+            content={flat.equipments.map((eq, index) => (
+              <li key={index}> {eq} </li>
+            ))} />
         </div>
     </div>
   )
