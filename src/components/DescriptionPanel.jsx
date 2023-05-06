@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './DescriptionPanel.scss';
 
+/* Fonction qui  */
 export function DescriptionPanel(props) {
 // Actuel
     const [isContentVisible, setIsContentVisible] = useState(false)

@@ -36,8 +36,9 @@ if (flat == null) return <div> ...Loading</div> // Execute le loading pour laiss
         <ImageBanner pictures={flat.pictures} />
         <ApartmentHeader flat={flat}  />
         <div className='apartment__description__area'>
-            <DescriptionPanel title='Description' content={flat.description} />
-
+            <DescriptionPanel 
+            title='Description' 
+            content={flat.description} />
             <DescriptionPanel 
             title='Equipments' 
             content={flat.equipments.map((eq, index) => (

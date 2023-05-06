@@ -7,11 +7,11 @@ import About from '../pages/About';
 import Footer from '../layout/Footer';
 import Main from '../layout/Main';
 import Navbar from '../components/Navbar';
-import { ErrorPageNotFound } from '../pages/ErrorPageNotFound';
+import { ErrorPageNotFound } from '../pages/ErrorPageNotFound'; // Import de la fonction { ErrorPageNotFound }
 
-// Composant qui définit une mise en page de base pour l'application 
-// qui inclut une barre de navigation en haut, une section centrale 
-// pour afficher le contenu des différentes pages, et un Footer en bas.
+/* Composant qui définit une mise en page de base pour l'application 
+   incluant une barre de navigation en haut, une section centrale 
+   pour afficher le contenu des différentes pages, et un Footer en bas. */
 
 const HeaderFooterLayout = () => {
     return <>
@@ -23,24 +23,19 @@ const HeaderFooterLayout = () => {
     </>
 }
 
-// Fonction de configuation des routages en définissant des routes 
+/* Fonction qui configure les routages en définissant des routes */
 function router () {
     const router = createBrowserRouter([
       { 
         element: <HeaderFooterLayout />,
         errorElement : <ErrorPageNotFound />,
         children: [
-
         { path: "/", element: <HomePage />, errorElement: <ErrorPageNotFound /> },
         { path: "/flat", element: <ApartmentPage />, errorElement: <ErrorPageNotFound /> },
         { path: "/about", element: <About />, errorElement: <ErrorPageNotFound /> },
-  
         ]
-
       }
-      
-      ]);
-
+    ]);
     ReactDOM.createRoot(document.getElementById('root')).render(
         <React.StrictMode>
           <RouterProvider router={router} />

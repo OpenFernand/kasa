@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar'
 import Main from '../layout/Main'
 import { Link } from 'react-router-dom'
 
-
+/* Fonction qui s'exécute et affiche la page d'erreur 404 */
 export function ErrorPageNotFound() {
   return (
     <>
