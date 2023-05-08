@@ -1,6 +1,7 @@
 import React from 'react'
 import './Banner.scss'
 
+/* Ce composant représente la fonction qui créée le banner */
 function Banner() {
   return (
     <div className="banner">

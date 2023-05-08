@@ -12,17 +12,18 @@
         text-transform: uppercase;
         font-weight: 400;
     }
-    
     & > *:first-child {
         margin-right: auto;
     }
     & a {
         text-decoration: none;
         color:$color-primary;
-    }
-    &.active,
-    &:hover {
-        text-decoration: underline;
+        &.active {
+            text-decoration: underline;
+        }
+        &:hover {
+            text-decoration: underline;
+        }
     }
 }
 

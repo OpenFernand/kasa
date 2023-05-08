@@ -4,19 +4,16 @@
     position: relative;
     background-position: center;
     background-size: cover;
-    //max-width: 80vw;
-    /*padding-inline: 2rem;*/
     padding: 2rem;
-    background-image: url(https://unsplash.it/1920/1080);
+    background-image: $background-banner-home-page;
     min-height: 140px;
-    //max-width: 100vw;
-    //margin: auto;
     border-radius: 2rem;
     display: grid;
     place-items: center;
     color: $color-tertiary;
     margin-bottom: 2rem;
     max-width: 100%;
+
 }
 
 .banner::before {
@@ -25,4 +22,5 @@
     content: "";
     /*inset: 0; */
     opacity: 0.5;
+    filter: brightness(0.8);
 }

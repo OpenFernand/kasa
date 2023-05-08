@@ -1,3 +1,3 @@
-import chemin from './routes/router_new';
+import chemin from './routes/router';
 
 chemin();
