@@ -14,34 +14,34 @@ import { ErrorPageNotFound } from '../pages/ErrorPageNotFound'; // Import de la 
    le contenu des différentes pages, et un Footer en bas. */
 
 const HeaderFooterLayout = () => {
-    return <>
-        <Navbar />
-        <Main>
-          <Outlet />
-        </Main>
-        <Footer />
-    </>
+  return <>
+    <Navbar />
+    <Main>
+      <Outlet />
+    </Main>
+    <Footer />
+  </>
 }
 
 /* Fonction qui configure les routages en définissant des routes */
-function router () {
-    const router = createBrowserRouter([
-      { 
-        element: <HeaderFooterLayout />,
-        errorElement : <ErrorPageNotFound />,
-        children: [
+function router() {
+  const router = createBrowserRouter([
+    {
+      element: <HeaderFooterLayout />,
+      errorElement: <ErrorPageNotFound />,
+      children: [
         { path: "/", element: <HomePage />, errorElement: <ErrorPageNotFound /> },
         { path: "/flat", element: <ApartmentPage />, errorElement: <ErrorPageNotFound /> },
         { path: "/about", element: <About />, errorElement: <ErrorPageNotFound /> },
-        ]
-      }
-    ]);
-    //ReactDOM.render(document.getElementById('root')).render(
-    ReactDOM.createRoot(document.getElementById('root')).render(
-        <React.StrictMode>
-          <RouterProvider router={router} />
-        </React.StrictMode>
-      )
+      ]
+    }
+  ]);
+  //ReactDOM.render(document.getElementById('root')).render(
+  ReactDOM.createRoot(document.getElementById('root')).render(
+    <React.StrictMode>
+      <RouterProvider router={router} />
+    </React.StrictMode>
+  )
 }
 
 export default router

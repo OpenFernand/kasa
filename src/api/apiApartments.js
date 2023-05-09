@@ -7,7 +7,7 @@ export async function getApartments() {
     try {
         const res = await fetch("data.json")
         const resJSON = await res.json()
-        console.log(resJSON)
+        console.log('resJSON 1', resJSON)
         return resJSON
     } catch (err) {
         console.error(err.message)

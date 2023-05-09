@@ -6,10 +6,10 @@ import logoFooter from '../assets/logo_footer.png'
 function Footer() {
   return (
     <div className="footer">
-        <div className="footer__logo">
-            <img src={logoFooter} alt='logo' width='100' />
-        </div>
-       <div className="footer__text"> © 2020 Kassa All rights reserved</div>
+      <div className="footer__logo">
+        <img src={logoFooter} alt='logo' width='100' />
+      </div>
+      <div className="footer__text"> © 2020 Kassa All rights reserved</div>
     </div>
   )
 }

@@ -12,14 +12,14 @@ export function DescriptionPanel(props) {
     const showContent = () => {
         setIsContentVisible(!isContentVisible)
     }
-    return ( // Methode ternaire : le contenu est affiché si isContentVisible est vrai
+    return ( // use la methode ternaire : le contenu est affiché si isContentVisible est vrai
         <div className="description__panel">
             <p className="description__header">
                 <span>{props.title}</span>
                 <i className={`fas ${isContentVisible ? 'fa-chevron-up' : 'fa-chevron-down'}`} onClick={showContent}></i>
             </p>
             <div className={`description__collapse ${isContentVisible ? 'open' : ''} `}>
-                <p className= 'description__content' >{props.content} </p>
+                <p className='description__content' >{props.content} </p>
             </div>
         </div>
     );

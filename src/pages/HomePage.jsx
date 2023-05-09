@@ -6,8 +6,8 @@ import ApartmentGrid from '../components/ApartmentGrid.jsx'
 function HomePage() {
   return (
     <>
-            <Banner />
-            <ApartmentGrid />
+      <Banner />
+      <ApartmentGrid />
     </>
   )
 }
