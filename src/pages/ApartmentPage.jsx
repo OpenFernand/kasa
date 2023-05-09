@@ -30,6 +30,7 @@ function ApartmentPage() {
     })
     .catch(console.error)
   }
+  
   if (flat == null) return <div> ...Loading</div> // Execute le loading pour laisser le temps de recharger la page 
     return (
       <div className='apartment-page'>

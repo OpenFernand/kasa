@@ -7,38 +7,20 @@ import './DescriptionPanel.scss';
    Au clic sur le chevron, la fonction showContent est appelée pour changer la valeur de 
    l'état isContentVisible. */
 export function DescriptionPanel(props) {
-//* Actuel
+    //* Actuel
     const [isContentVisible, setIsContentVisible] = useState(false)
     const showContent = () => {
         setIsContentVisible(!isContentVisible)
     }
-    return ( //le contenu est affiché si isContentVisible est vrai.
+    return ( // Methode ternaire : le contenu est affiché si isContentVisible est vrai
         <div className="description__panel">
-        <p className="description__header">
-            <span>{props.title}</span>
-            <i className="fas fa-chevron-down" onClick={showContent}></i>
-        </p>
-        {isContentVisible && <p className="description__content" >{props.content} </p>}
-        </div>
-    );
-// Fin actuel 
-
-/* version définitive---
-
-    const [isContentVisible, setIsContentVisible] = useState(false)
-    const showContent = () => {
-        setIsContentVisible(!isContentVisible)
-    const contentClass = (isContentVisible ? 'visible' : "hidden") + 'description__content'
-    const chevronClass = (isContentVisible ? 'fa-chevron-up' : "fa-chevron-down") + 'fas'
-    return (
-        <div className="description__panel">
-            <p className="description__header" onClick={showContent}>
+            <p className="description__header">
                 <span>{props.title}</span>
-                <i className={chevronClass}></i>
+                <i className={`fas ${isContentVisible ? 'fa-chevron-up' : 'fa-chevron-down'}`} onClick={showContent}></i>
             </p>
-            <p className={contentClass}>{props.content}</p>
+            <div className={`description__collapse ${isContentVisible ? 'open' : ''} `}>
+                <p className= 'description__content' >{props.content} </p>
+            </div>
         </div>
     );
-}
-*/
 }

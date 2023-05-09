@@ -3,35 +3,50 @@
 .description__panel {
     margin-bottom: 1rem;
     flex-basis: 50%;
-    overflow: hidden;
+    //overflow: hidden;
     p {
         padding-top: 0;
         padding-bottom: 0;
     }
     .description__header {
+        display: flex;
+        justify-content: space-between;
         background-color: $color-primary;
         color: $color-tertiary;
         padding: 0.2em 1em;
         border-radius: 0.7rem;
-        display: flex;
-        justify-content: space-between;
         align-items: center;
         cursor: pointer;
         i {
             font-size: 2rem;
             cursor: pointer;
         }
+        @media screen and (max-width: 768px) {
+            font-size: 13px;
+          }
     }
-    .description__content {
-        background-color: blue;
-        color: $color-primary;
-        padding: 1rem;
-        border-radius: 0 0 1rem 1rem;
+    .description__collapse {
+        margin-top: -20px;
         position: relative;
+        max-height: 0;
+        overflow: hidden;
         top: -0,3rem;
         z-index: -1;
-        margin-top: -20px;
-        animation: slide-in 0.5s ease-in-out;
+        //transition: max-height 2s ease-in-out;
+        &.open {
+            max-height: 1000px ;
+        }
+    }
+    .description__content {
+        background-color: $background-dark;
+        color: $color-primary;
+        border-radius: 0 0 1rem 1rem;
+        margin: 0;
+        padding: 1rem;
+        //animation: slide-in 0.5s ease-in-out;
+        @media screen and (max-width: 768px) {
+            font-size: 12px;
+          }
     }
 
     @keyframes slide-in {

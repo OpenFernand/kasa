@@ -8,4 +8,10 @@
     min-height: 100px;
     display: grid;
     place-items: center;
+    .footer__text {
+        @media screen and (max-width: 768px) {
+            font-size: 13px;
+          }
+    }
+
 }
