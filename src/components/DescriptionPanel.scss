@@ -1,7 +1,7 @@
 @use "../scss/variables.scss" as *;
 
 .description__panel {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     flex-basis: 50%;
     //overflow: hidden;
     p {
@@ -23,6 +23,9 @@
         }
         @media screen and (max-width: 768px) {
             font-size: 13px;
+            i {
+                font-size: 1.5rem;
+            }
           }
     }
     .description__collapse {
