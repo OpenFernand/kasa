@@ -7,8 +7,6 @@ import './ApartmentCard.scss'
    On utilise props pour afficher l'image, props.id pour stocker l'identifiant unique 
    de l'appartement transmis comme paramètre à la page détaillée de l'appartement*/
 function ApartmentCard(props) {
-  // console.log('props dans apartment card:', props)
-  // console.log('le titre', props.title)
   return (
     <Link to='/flat' state={
       { apartmentId: props.id }

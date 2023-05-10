@@ -18,7 +18,7 @@ function ApartmentGrid() {
     getApartments()
       .then((list) => {
         setApartments(list)
-        console.log(list);
+     //   console.log(list);
       })
       .catch(console.error)
   },
