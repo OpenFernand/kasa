@@ -9,9 +9,8 @@ import Main from '../layout/Main';
 import Navbar from '../components/Navbar';
 import { ErrorPageNotFound } from '../pages/ErrorPageNotFound'; // Import de la fonction { ErrorPageNotFound }
 
-/* Composant qui définit une mise en page de base pour l'application, qui  
-   inclue une barre de navigation en haut, une section centrale pour afficher
-   le contenu des différentes pages, et un Footer en bas. */
+/* Composant qui définit une mise en page de base pour l'application, contenant une barre
+   de navigation en haut, une section centrale pour afficher le contenu des différentes pages, et un Footer en bas. */
 
 const HeaderFooterLayout = () => {
   return <>
@@ -24,6 +23,7 @@ const HeaderFooterLayout = () => {
 }
 
 /* Fonction qui configure les routages en définissant des routes */
+
 function router() {
   const router = createBrowserRouter([
     {
@@ -36,7 +36,7 @@ function router() {
       ]
     }
   ]);
-  //ReactDOM.render(document.getElementById('root')).render(
+
   ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
       <RouterProvider router={router} />

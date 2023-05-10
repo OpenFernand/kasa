@@ -3,7 +3,10 @@ import './ErrorPageNotFound.scss'
 import Navbar from '../components/Navbar'
 import { Link } from 'react-router-dom'
 
-/* Fonction qui s'exécute et affiche la page d'erreur 404 avec import de Navbar */
+/* Cette fonction définit le composant React pour la page d'erreur 404. Renvoie
+   une div contenant un titre de niveau 1 et un titre de niveau 2. Il inclut 
+   également la barre de navigation, qui est appelé "Navbar".*/
+
 export function ErrorPageNotFound() {
   return (
     <>

@@ -2,9 +2,11 @@ import React, { useState } from 'react'
 import './ImageBanner.scss'
 import ImageAboutCover from '../assets/background_about_cover.png'
 
+/*Cette fonction est un composant qui affiche une bannière d'images. Il prend en entrée 
+un tableau d'URLs d'images */
 export function ImageBanner(props) {
   const pictures = props.pictures
-  /* useState pour gérer l état de mon composant "setCurrentPicture"initialisé à 0 */
+
   const [currentPicture, setCurrentPicture] = useState(0)
 
   const getClassName = (i) => {
@@ -12,9 +14,10 @@ export function ImageBanner(props) {
     return ''
   }
 
-  /* Gestion du Carrousel : avec les boutons flechés qui seront appelés au clic*/
+  /* Gestion du Carrousel : avec les boutons flechés qui seront appelés au clic.  
+     Modulo % permet de revenir au début de la liste d'image.*/
   const moveToNext = () => {
-    setCurrentPicture((currentPicture + 1) % pictures.length) // Modulo % pour revenir au début de la liste d'image.
+    setCurrentPicture((currentPicture + 1) % pictures.length)
   }
   const moveToPrevious = () => {
     const newCurrentPicture = currentPicture - 1
@@ -41,10 +44,8 @@ export function ImageBanner(props) {
     ))
   }
 
-  /* On vérifie d'abord si des images sont disponibles en appelant la fonction 
-     arePicturesAvailable() qui renvoie un booléen. Si des images sont disponibles, 
-     il affiche deux boutons : passer à l'image et revenir à l'image précédente.
-     Les fonctions moveToNext et moveToPrevious sont appelées lors du clic */
+  /* On vérifie d'abord si des images sont disponibles. Si oui, on affiche deux boutons : passer à l'image 
+     et revenir à l'image précédente. Les fonctions moveToNext et moveToPrevious sont appelées lors du clic */
   return (
 
     <div className='image__banner'>

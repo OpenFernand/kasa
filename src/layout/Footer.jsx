@@ -3,6 +3,7 @@ import './Footer.scss'
 import logoFooter from '../assets/logo_footer.png'
 
 /* Ce composant représente la fonction qui créée le pied de page */
+
 function Footer() {
   return (
     <div className="footer">

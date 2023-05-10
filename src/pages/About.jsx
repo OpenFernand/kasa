@@ -3,6 +3,8 @@ import {ImageBanner} from '../components/ImageBanner'
 import { DescriptionPanel } from '../components/DescriptionPanel'
 import './About.scss'
 
+/* Ce composant affiche une bannière d'image et quatre panneaux de description (avec DescriptionPanel) */
+
 function About() {
 
   return (
