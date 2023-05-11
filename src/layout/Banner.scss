@@ -4,8 +4,9 @@
     position: relative;
     background-position: center;
     background-size: cover;
-    padding: 2rem;
+ // background-image: url("../assets/background_banner_home_page.png");
     background-image: $background-banner-home-page;
+    padding: 2rem;
     min-height: 140px;
     border-radius: 2rem;
     display: grid;
@@ -13,14 +14,19 @@
     color: $color-tertiary;
     margin-bottom: 2rem;
     max-width: 100%;
-
+    font-size: 1.2rem;
+    
+    @media screen and (max-width: 768px) {
+        font-size: 0.8rem;
+        min-height: 50%;
+      }
 }
 
 .banner::before {
     position: absolute;
     border-radius: 2rem;
     content: "";
-    //inset: 0;
+    // inset: 0;
     opacity: 0.5;
     filter: brightness(0.8);
 }
