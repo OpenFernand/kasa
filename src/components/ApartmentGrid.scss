@@ -3,7 +3,7 @@
 .grid {
     background-color: $background-dark;
     min-height: 50vh;
-    border-radius: 2rem;
+    border-radius: 25px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;

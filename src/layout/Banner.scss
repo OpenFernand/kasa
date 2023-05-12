@@ -4,11 +4,10 @@
     position: relative;
     background-position: center;
     background-size: cover;
- // background-image: url("../assets/background_banner_home_page.png");
     background-image: $background-banner-home-page;
     padding: 2rem;
     min-height: 140px;
-    border-radius: 2rem;
+    border-radius: 25px;
     display: grid;
     place-items: center;
     color: $color-tertiary;
@@ -17,6 +16,7 @@
     font-size: 1.2rem;
     
     @media screen and (max-width: 768px) {
+        border-radius: 10px;
         font-size: 0.8rem;
         min-height: 50%;
       }
