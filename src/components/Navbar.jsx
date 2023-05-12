@@ -11,15 +11,17 @@ function Navbar() {
     <nav className="navbar">
       <NavLink to='/'>
         <div className="navbar__logo">
-          <img src={logoHeader} alt="logo" width='200' height='62' />
+          <img src={logoHeader} alt="logo" />
         </div>
       </NavLink>
-      <NavLink to='/'>
-        Accueil
-      </NavLink>
-      <NavLink to='/about'>
-        A propos
-      </NavLink>
+      <div className='navbar__links'>
+        <NavLink to='/'>
+          Accueil
+        </NavLink>
+        <NavLink to='/about'>
+          A propos
+        </NavLink>
+      </div>
     </nav>
   )
 }

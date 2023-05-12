@@ -42,9 +42,17 @@
         * {
             font-size: 1rem;
         }
+        svg {
+            fill: $background-light;
+            @media screen and (max-width: 768px) {
+                width: 13.6px;
+                height: 13px;
+              }
+        }
         .on {
             //font-size: 2rem;
             color: $color-primary;
+            fill: $color-primary;
         }
     }
     h1 {
@@ -67,23 +75,28 @@
     }
     .apartment__tags {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(100px, 150px));
+        grid-template-columns: repeat(auto-fit, minmax(100px, 200px));
         span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             background-color: $color-primary;
             color: $color-tertiary;
             padding: 0.3em 1em;
-            border-radius: 0.7rem ;
-            text-align: center;
+            border-radius: 0.5rem ;
             margin-right: 7px; // ajustement
             margin-top: 0.5em;
             font-size: 14px;
-         //   margin-block: 0.5em;
             @media screen and (max-width: 768px) {
                 font-size: 10px;
+                height: 18px;
           }
         }
+        @media screen and (max-width: 768px) {
+            grid-template-columns: repeat(auto-fit, minmax(100px, 120px));
+            text-align: center;
+        }
     }
-    
     h3 {
         margin-top: 0;
         margin-bottom: 0;

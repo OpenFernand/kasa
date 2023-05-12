@@ -3,6 +3,7 @@
 .navbar {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 2rem;
     color: $color-primary;
     font-weight: 500;
@@ -12,20 +13,37 @@
         text-transform: uppercase;
         font-weight: 500;
         font-size: 12px ;
-
     }
-    & > *:first-child { // sélectionne tous les enfants directs de l'élément parent (&) qui sont les premiers enfants de leur propre parent, et leur applique les styles
-        margin-right: auto;
+    .navbar__logo {  
+        max-width: 210px;
+        max-height: 68px;
+        @media screen and (width <= 768px) {
+            max-width: 145px;
+            max-height: 47px;
+        }
+        img {
+            max-width: inherit;
+            max-height: inherit;
+        }
+    }
+    .navbar__links{
+        display: flex;
+        gap: 60px;
+        @media screen and (width <= 768px) {
+            gap: 10px;
+        }
     }
     & a { // sélectionne tous les éléments "a" et une classe active et on applique les styles
         text-decoration: none;
         color:$color-primary;
-        &.active {
-            text-decoration: underline;
-        }
-        &:hover {
+        white-space: nowrap;
+        &.active, &:hover {
             text-decoration: underline;
         }
     }
+
+
 }
+
+
 

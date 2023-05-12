@@ -20,6 +20,9 @@
         font-size: 0.8rem;
         min-height: 50%;
       }
+      h2 {
+        font-weight: 500;
+      }
 }
 
 .banner::before {
@@ -30,3 +33,4 @@
     opacity: 0.5;
     filter: brightness(0.8);
 }
+
