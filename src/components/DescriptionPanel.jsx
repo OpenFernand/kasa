@@ -11,7 +11,7 @@ export function DescriptionPanel(props) {
     const showContent = () => {
         setIsContentVisible(!isContentVisible)
     }
-    return ( // utiloisation de la methode ternaire : le contenu est affiché si isContentVisible est vrai
+    return ( // utilisation de la méthode ternaire : le contenu est affiché si isContentVisible est vrai
         <div className="description__panel">
             <p className="description__header">
                 <span>{props.title}</span>
