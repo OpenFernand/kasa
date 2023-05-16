@@ -12,13 +12,17 @@ import { ErrorPageNotFound } from '../pages/ErrorPageNotFound'; // Import de la 
 /* Composant fonctionnel définissant une mise en page commune pour les différentes pages, contenant une barre
    de navigation en haut, un "Main" pour afficher le contenu des différentes pages, et un Footer en bas. */
 const HeaderFooterLayout = () => {
-  return <>
-    <Navbar />
-    <Main>
-      <Outlet />
-    </Main>
+  return (
+  <>
+    <div style={{ maxWidth: 1440, margin: '0 auto' }}>
+      <Navbar />
+      <Main>
+        <Outlet />
+      </Main>
+    </div>
     <Footer />
   </>
+  )
 }
 
 /* Fonction qui creer les trois routes ainsi que l'element d'erreur qui sera affiché en cas d'erreur. 
@@ -30,7 +34,7 @@ function router() {
       errorElement: <ErrorPageNotFound />,
       children: [
         { path: "/", element: <HomePage />, errorElement: <ErrorPageNotFound /> },
-        { path: "/flat", element: <ApartmentPage />, errorElement: <ErrorPageNotFound /> },
+        { path: "/flat/:id", element: <ApartmentPage />, errorElement: <ErrorPageNotFound /> },
         { path: "/about", element: <About />, errorElement: <ErrorPageNotFound /> },
 
       ]
@@ -38,7 +42,7 @@ function router() {
   ]);
   /* Methode qui créé la racine du rendu React dans le DOM et rend l'application. "RouterProvider"  encapsule
      l'application et gère les changements URL et la navigation entre les pages  */
-  ReactDOM.createRoot(document.getElementById('root')).render( 
+  ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
       <RouterProvider router={router} />
     </React.StrictMode>

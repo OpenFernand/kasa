@@ -15,6 +15,7 @@ function ApartmentGrid() {
   useEffect(() => {
     getApartments()
       .then((list) => {
+        console.log('homepage', {list})
         setApartments(list)
       })
       .catch(console.error)
