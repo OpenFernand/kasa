@@ -19,8 +19,8 @@ const HeaderFooterLayout = () => {
       <Main>
         <Outlet />
       </Main>
+      <Footer />
     </div>
-    <Footer />
   </>
   )
 }
