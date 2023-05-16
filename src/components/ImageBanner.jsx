@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import './ImageBanner.scss'
 import ImageAboutCover from '../assets/background_about_cover.png'
 
-/*Cette fonction est un composant qui affiche une bannière d'images. Il prend en entrée 
-un tableau d'URLs d'images */
+/* Cette fonction est un composant qui affiche un carrousel d'images. Il prend en entrée 
+   un tableau d'URLs d'images */
 export function ImageBanner(props) {
   const pictures = props.pictures
 
@@ -34,7 +34,7 @@ export function ImageBanner(props) {
   const arePicturesAvailable = () => {
     return pictures && pictures.length > 0
   }
-
+  
   const getCarrouselOrDefaultImage = () => {
     if (!pictures || pictures.length === 0) {
       return <img src={ImageAboutCover} className='show' alt='' />

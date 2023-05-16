@@ -4,9 +4,9 @@ import Navbar from '../components/Navbar'
 import { Link } from 'react-router-dom'
 
 /* Cette fonction définit le composant React pour la page d'erreur 404. Renvoie
-   une div contenant un titre de niveau 1 et un titre de niveau 2. Il inclut 
-   également la barre de navigation, qui est appelé "Navbar".*/
-
+   une div contenant 2 titres et notre barre de navigation.Il est importé dans 
+   notre routeur pour affichage lorsque l'utilisateur accède à une URL inexistante */
+   
 export function ErrorPageNotFound() {
   return (
     <>

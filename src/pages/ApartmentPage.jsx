@@ -5,9 +5,9 @@ import { ApartmentHeader } from '../components/ApartmentHeader'
 import { DescriptionPanel } from '../components/DescriptionPanel'
 import { useLocation } from 'react-router-dom'
 
-/* Cette fonction est un composant fonctionnel représantant la page d'un appartment sélectioné. 
+/* Ce composant fonctionnel affiche les détails d'un appartement sélectionné. 
 Il utilise le hook useLocation pour récupérer l'ID de l'appartement transmis à partir de l'URL.
-Charge les données des apartments à partir du fichier data.json en utilisant l'API fetch. */
+Il charge les données des apartments à partir du fichier data.json en utilisant l'API fetch. */
 
 function ApartmentPage() {
   const location = useLocation()
@@ -27,7 +27,7 @@ function ApartmentPage() {
       .catch(console.error)
   }
   /* Si "flat" est null, signifie que les données n'ont pas encore été chargées. on affiche un message 
-     de chargement. Sinon, afficher l'image de bannière de l'appartement, l'en-tête et les équipements. */
+     de chargement...loading. Sinon, afficher l'image de bannière de l'appartement, l'en-tête et les équipements. */
   if (flat == null) return <div> ...Loading</div>
   return (
     <div className='apartment-page'>
