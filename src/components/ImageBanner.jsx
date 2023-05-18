@@ -35,7 +35,7 @@ export function ImageBanner(props) {
     ))
   }
 
-  /* Gestion d'un appartement avec 1 seule photo*/
+  /* Gestion d'un appartement avec 1 seule photo sans chevron, ni compteur*/
   if (pictures.length === 1) {
     return (
       <div className='image__banner'>
