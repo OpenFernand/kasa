@@ -1,14 +1,11 @@
 import React, { useState } from 'react'
 import './ImageBanner.scss'
-import ImageAboutCover from '../assets/background_about_cover.png'
 
 /* Cette fonction est un composant qui affiche un carrousel d'images. Il prend en entrée 
    un tableau d'URLs d'images */
 export function ImageBanner(props) {
   const pictures = props.pictures
-
   const [currentPicture, setCurrentPicture] = useState(0)
-
   const getClassName = (i) => {
     if (i === currentPicture) return 'show'
     return ''
@@ -28,26 +25,29 @@ export function ImageBanner(props) {
     setCurrentPicture(currentPicture - 1)
   }
 
-  /* Gestion du Carrousel pour la page "A propos": afin d afficher 1 seule image sur la page
-     "A propos". S'il n'y a pas de props.picture, alors afficher simplement une image au hasard, 
-     si non on effectue le map pour les autres images */
   const arePicturesAvailable = () => {
     return pictures && pictures.length > 0
   }
-  
+
   const getCarrouselOrDefaultImage = () => {
-    if (!pictures || pictures.length === 0) {
-      return <img src={ImageAboutCover} className='show' alt='' />
-    }
     return pictures.map((pic, i) => (
       <img key={pic} src={pic} alt='' className={getClassName(i)}></img>
     ))
   }
 
+  /* Gestion d'un appartement avec 1 seule photo*/
+  if (pictures.length === 1) {
+    return (
+      <div className='image__banner'>
+        <div className='image__container'>{getCarrouselOrDefaultImage()}
+        </div>
+      </div>
+    )
+  }
+
   /* On vérifie d'abord si des images sont disponibles. Si oui, on affiche deux boutons : passer à l'image 
      et revenir à l'image précédente et le compteur x/y. Les fonctions moveToNext et moveToPrevious sont appelées lors du clic */
   return (
-
     <div className='image__banner'>
       <div className='image__container'>{getCarrouselOrDefaultImage()}
       </div>
